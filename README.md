@@ -13,17 +13,18 @@ Paper Link: to be updated
 # Environment
 Ubuntu16.04, Python3.7, TensorFlow2.1
 
-# Preprocessing
-
-to be updated
-
 
 # Model Pretraining
 
-to be updated
+in folder pretraining 
 
 # Downstream finetune
 
-to be updated
+in folder fineune
+
+# Attention playground
+
+in folder attention
+
 
 
