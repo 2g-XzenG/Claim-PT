@@ -170,9 +170,11 @@ def model(
         
     patient_embedding = layers.Dense(patient_dim, activation=None, name="patient_embedding")(tf.squeeze(demo_emb, [1]))
     
+    ##################### NVP task #####################
     # code_label = layers.Dense(units=model_dim, activation=tf.nn.sigmoid)(patient_embedding)
     code_label = layers.Dense(units=cat_vocab, activation=tf.nn.sigmoid, name='code_label')(patient_embedding)
     
+    ##################### CP task #####################
     # cat_label = layers.Dense(units=model_dim, activation=tf.nn.sigmoid)(visit_emb)
     cat_label = layers.Dense(units=cat_vocab, activation=tf.nn.sigmoid, name='cat_label')(visit_emb)
    
