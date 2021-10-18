@@ -18,6 +18,17 @@ Ubuntu16.04, Python3.7, TensorFlow2.1
 
 in folder pretraining 
 
+### List of hyper-parameter we used in the pre-training stage
+
+- MAX_VISIT=30
+- MAX_CODE=10
+- MAX_DEMO=2
+- PATIENT_DIM=100
+- BATCH_SIZE = 100
+- TRAIN_RATIO = 0.8
+- DATA_SIZE = len(age_seq)
+- EPOCHS = 1000
+
 # Downstream finetune
 
 in folder fineune
