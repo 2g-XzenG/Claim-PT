@@ -134,8 +134,10 @@ def model(
                                 output_dim=vocab_dim, 
                                 name='code_embed')(code_seq)
     code_emb = layers.Multiply()([code_emb, code_mask])
-    code_emb = tf.reduce_sum(code_emb, axis=2)     
-
+    code_emb = tf.reduce_sum(code_emb, axis=2) 
+    #code_emb = tf.reduce_mean(code_emb, axis=2) 
+    #code_emb = tf.keras.layers.MaxPool1D(code_emb, pool_size=2, strides=1, padding='valid')
+    
     
     # visit mask
     visit_mask = layers.Lambda(create_visit_mask)(date_seq)
