@@ -1,5 +1,6 @@
 import numpy as np
 import tensorflow as tf
+
 from tensorflow.keras import layers
 
 def create_code_mask(code_seq):
